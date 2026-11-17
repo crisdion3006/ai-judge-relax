@@ -12,8 +12,11 @@ import { join } from 'node:path';
 
 const OUTPUT_DIR = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 
+// Revised (v2): the opening drops "the last boat" for "once the boats were tied up for the night" (no finality);
+// the rope now "stirs, and then settles" instead of creaking and stopping (no sharp sound, no abrupt stop);
+// and the final line lets the bell linger "slow and far away" so the reader drifts off more gently.
 const TEXT =
-  'The fog came in over the harbor after the last boat was tied up, and by nine the lamps along the quay had softened until each one was only a pale coin of light. Out on the water a buoy bell rings once, and takes its time before it rings again. The tide is going out so slowly that the water lets go of the wooden post inch by inch. The gulls have settled. Now and then a rope creaks, and then stops. The fog will stay until morning, and the tide will keep going out, and the bell will still be ringing long after you have stopped listening.';
+  'The fog came in over the harbor once the boats were tied up for the night, and by nine the lamps along the quay had softened until each one was only a pale coin of light. Out on the water a buoy bell rings once, and takes its time before it rings again. The tide is going out so slowly that the water lets go of the wooden post inch by inch. The gulls have settled. Now and then a rope stirs, and then settles. The fog will stay until morning, and the tide will keep going out, and the bell will still be ringing, slow and far away, long after you have stopped listening.';
 
 mkdirSync(OUTPUT_DIR, { recursive: true });
 writeFileSync(join(OUTPUT_DIR, 'entry.txt'), TEXT, 'utf8');
